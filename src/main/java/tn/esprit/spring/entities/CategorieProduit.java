@@ -13,7 +13,6 @@ import javax.persistence.OneToMany;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,7 +34,7 @@ import lombok.experimental.FieldDefaults;
 @EqualsAndHashCode
 @RequiredArgsConstructor
 @Builder // ki nabda nheb naml des parametres kima nheb n3ayt lelcalsse.builder( w nhot lhne les att eli nheb alehom)
-//@FieldDefaults(level = AccessLevel.PRIVATE)
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class CategorieProduit implements Serializable{
 
 	@Id
@@ -47,5 +46,5 @@ public class CategorieProduit implements Serializable{
 	String libelleCategorieProduit;
 	
 	@OneToMany(mappedBy = "categorieProduit" , cascade = CascadeType.ALL)
-	public Set<Produit> produits;
+	Set<Produit> produits;
 }
