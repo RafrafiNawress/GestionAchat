@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tn.esprit.spring.entities.Produit;
+import tn.esprit.spring.repository.CategorieProduitRepository;
 import tn.esprit.spring.repository.ProduitRepository;
 import tn.esprit.spring.repository.StockRepository;
 
